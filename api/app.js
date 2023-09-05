@@ -9,6 +9,10 @@ const port = process.env.PORT || 5001;
 const app = express();
 app.use(express.json());
 
-app.listen(, (req, res) => {
-    res.send(`App is run`)
-} );
+app.get("/", (req, res) => {
+  res.send("<h1>EgoTheDev Welcomes you to this space</h1>");
+});
+
+app.listen(port, (req, res) => {
+  console.log(`App is up and running on ${port}`);
+});
