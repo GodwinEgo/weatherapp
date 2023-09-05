@@ -6,9 +6,9 @@ const App = () => {
 
   const fetchMessage = () => {
     axios
-      .get("http://localhost/5000")
+      .get("http://localhost:5000/")
       .then((response) => {
-        setMessage(`Hello ${response.data.message}`);
+        setMessage(`Hello ${response.data}`);
       })
       .catch((error) => {
         console.error("Error fetching message: ", error);

@@ -8,6 +8,7 @@ dotenv.config();
 const port = process.env.PORT || 5001;
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("<h1>EgoTheDev Welcomes you to this space</h1>");
