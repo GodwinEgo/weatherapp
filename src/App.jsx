@@ -18,7 +18,7 @@ const App = () => {
     <div>
       <h1 className="text-center">Hello World</h1>
       <button onClick={fetchMessage}>Click me</button>
-      <p>{message}</p>
+      <h1>{message}</h1>
     </div>
   );
 };

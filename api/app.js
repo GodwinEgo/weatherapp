@@ -11,7 +11,16 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("<h1>EgoTheDev Welcomes you to this space</h1>");
+  res.send("EgoTheDev Welcomes you to this space");
+});
+app.get("/check-qualification", (req, res) => {
+  const age = req.body;
+
+  if (age >= 18) {
+    res.json({ message: "Qualified to register for the gambling site" });
+  } else {
+    res.json({ message: "Get the fuck out of here, you minor" });
+  }
 });
 
 app.listen(port, (req, res) => {
