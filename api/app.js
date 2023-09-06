@@ -17,9 +17,9 @@ app.get("/check-qualification", (req, res) => {
   const age = req.body;
 
   if (age >= 18) {
-    res.json({ reply: "Qualified to register for the gambling site" });
+    res.send("Qualified to register for the gambling site");
   } else {
-    res.json({ reply: "Get the fuck out of here, you minor" });
+    res.send("Get the fuck out of here, you minor");
   }
 });
 

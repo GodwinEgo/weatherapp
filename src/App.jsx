@@ -33,20 +33,15 @@ const App = () => {
       <h1>{message}</h1>
 
       <div>
-        <form
-          action="
-       "
-        >
-          <input
-            type="number"
-            placeholder="Enter your age"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-          <br />
-          <br />
-          <button onClick={checkQualification}>Check Quaification</button>
-        </form>
+        <input
+          type="number"
+          placeholder="Enter your age"
+          value={age}
+          onChange={(e) => setAge(e.target.value)}
+        />
+        <br />
+        <br />
+        <button onClick={checkQualification}>Check Quaification</button>
         <p>{qual}</p>
       </div>
     </div>
