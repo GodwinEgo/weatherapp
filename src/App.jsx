@@ -4,6 +4,7 @@ import axios from "axios";
 const App = () => {
   const [message, setMessage] = useState("");
   const [age, setAge] = useState("");
+  const [qual, setQual] = useState("");
 
   const fetchMessage = () => {
     axios
@@ -19,7 +20,7 @@ const App = () => {
     axios
       .get("http://localhost:5000/check-qualification", { age: age })
       .then((response) => {
-        setMessage(response.data);
+        setQual(response.data);
       })
       .catch((error) => {
         console.error("Error checking qualifications; ", error);
@@ -32,16 +33,21 @@ const App = () => {
       <h1>{message}</h1>
 
       <div>
-        <input
-          type="number"
-          placeholder="Enter your age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-        <br />
-        <br />
-        <button onClick={checkQualification}>Check Quaification</button>
-        <p>{message}</p>
+        <form
+          action="
+       "
+        >
+          <input
+            type="number"
+            placeholder="Enter your age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+          <br />
+          <br />
+          <button onClick={checkQualification}>Check Quaification</button>
+        </form>
+        <p>{qual}</p>
       </div>
     </div>
   );
